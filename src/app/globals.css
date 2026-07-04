@@ -12,11 +12,8 @@
   --warm: #b8a088;
   --warm-light: #d4c4b0;
   --border: #e5e0d8;
-<<<<<<< HEAD
   --brand-red: #d71920;
   --brand-red-dark: #b8141a;
-=======
->>>>>>> 3c5805ce02ea9542f210620c6dc56fbbc47f38c0
 }
 
 @theme inline {
@@ -31,11 +28,8 @@
   --color-warm: var(--warm);
   --color-warm-light: var(--warm-light);
   --color-border: var(--border);
-<<<<<<< HEAD
   --color-brand-red: var(--brand-red);
   --color-brand-red-dark: var(--brand-red-dark);
-=======
->>>>>>> 3c5805ce02ea9542f210620c6dc56fbbc47f38c0
   --font-sans: var(--font-inter);
   --font-display: var(--font-manrope);
 }

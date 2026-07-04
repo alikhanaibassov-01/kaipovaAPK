@@ -3,10 +3,7 @@ export const site = {
   shortName: "Каипова А.А.",
   role: "Мастер производственного обучения · Педагог-эксперт",
   organization: "КГКП «Колледж принтмедиа технологий»",
-<<<<<<< HEAD
   collegeName: "Колледж принтмедиа технологий",
-=======
->>>>>>> 3c5805ce02ea9542f210620c6dc56fbbc47f38c0
   city: "Алматы",
   tagline:
     "Создаю цифровые образовательные ресурсы и авторские программы в области графического дизайна и принтмедиа технологий.",
@@ -47,7 +44,6 @@ export const site = {
     },
   ],
   contacts: {
-<<<<<<< HEAD
     email: "kpt-college@almatybilim.kz",
     phones: ["+7 727 394 40 51", "+7 701 35 35 887"],
     address: "Шевченко 202",
@@ -59,11 +55,6 @@ export const site = {
       lat: 43.2418421,
       lon: 76.8919153,
     },
-=======
-    email: "kaipova.aa@example.com",
-    telegram: "#",
-    whatsapp: "#",
->>>>>>> 3c5805ce02ea9542f210620c6dc56fbbc47f38c0
   },
   nav: [
     { label: "Обо мне", href: "#about" },
