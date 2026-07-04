@@ -6,8 +6,8 @@ import { TwoGisMap } from "@/components/sections/TwoGisMap";
 function PhoneIcon() {
   return (
     <svg
-      width="20"
-      height="20"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -21,8 +21,8 @@ function PhoneIcon() {
 function MailIcon() {
   return (
     <svg
-      width="20"
-      height="20"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -44,51 +44,52 @@ export function Contact() {
         description="Колледж принтмедиа технологий · Алматы"
       />
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start lg:gap-10">
-        <div>
+      <div className="mt-10 grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-10">
+        <div className="min-w-0">
           <TwoGisMap
             firmId={map.firmId}
             lat={map.lat}
             lon={map.lon}
-            height={320}
+            height={400}
           />
           <a
             href={`https://2gis.kz/almaty/firm/${map.firmId}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 flex w-full items-center justify-center rounded-lg bg-brand-red px-4 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-brand-red-dark"
+            className="mt-3 flex w-full items-center justify-center rounded-md bg-brand-red px-4 py-4 text-center text-lg font-semibold text-white transition-colors hover:bg-brand-red-dark"
           >
             {site.collegeName}
           </a>
-          <p className="mt-3 text-center text-base font-medium text-navy">
+          <p className="mt-3 text-center text-lg font-medium text-navy">
             {address}, {city}
           </p>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex min-w-0 flex-col justify-center gap-8 md:pt-2">
           <Image
             src="/images/printmedia-logo.png"
             alt="Printmedia"
-            width={280}
-            height={80}
-            className="h-auto w-full max-w-[280px] object-contain"
+            width={320}
+            height={96}
+            className="h-auto w-full max-w-[320px] object-contain"
           />
 
-          <div className="flex flex-col gap-4">
-            {phones.map((phone) => (
+          <div className="flex flex-col gap-5">
+            {phones.map((phone, index) => (
               <a
                 key={phone}
                 href={`tel:${phone.replace(/\s/g, "")}`}
-                className="inline-flex items-center gap-3 text-lg font-medium text-navy transition-colors hover:text-brand-red"
+                className="inline-flex items-center gap-3 text-xl font-medium text-navy transition-colors hover:text-brand-red"
               >
-                <PhoneIcon />
+                {index === 0 && <PhoneIcon />}
+                {index > 0 && <span className="w-[22px] shrink-0" aria-hidden="true" />}
                 {phone}
               </a>
             ))}
 
             <a
               href={`mailto:${email}`}
-              className="inline-flex items-center gap-3 text-lg font-medium text-navy transition-colors hover:text-brand-red"
+              className="inline-flex items-center gap-3 text-xl font-medium text-navy transition-colors hover:text-brand-red"
             >
               <MailIcon />
               {email}
