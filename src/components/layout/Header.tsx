@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { site } from "@/data/site";
 import { HeaderSoftwareTools } from "@/components/layout/HeaderSoftwareTools";
@@ -14,11 +15,15 @@ export function Header() {
       <div className="header-bar backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3.5 lg:px-6">
           <a href="#" className="group flex items-center gap-3 min-w-0">
-            <div
-              className="gradient-header flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xs font-bold text-white shadow-[0_4px_14px_rgb(42,74,98,0.4)] ring-2 ring-white/40 transition-transform duration-300 group-hover:scale-[1.03]"
-              style={{ fontFamily: "var(--font-manrope)" }}
-            >
-              КА
+            <div className="flex h-10 shrink-0 items-center justify-center rounded-xl bg-white/90 p-1.5 shadow-[0_4px_14px_rgb(42,74,98,0.18)] ring-2 ring-white/60 transition-transform duration-300 group-hover:scale-[1.03]">
+              <Image
+                src="/images/printmedia-logo.png"
+                alt="Printmedia"
+                width={120}
+                height={32}
+                className="h-7 w-auto object-contain"
+                priority
+              />
             </div>
             <div className="min-w-0 hidden sm:block">
               <p className="heading-display text-sm font-semibold text-navy leading-tight">
